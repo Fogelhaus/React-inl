@@ -18,10 +18,10 @@ class Navigation extends Component {
 
     render() {
         let currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        localStorage.setItem('uName',this.props.name)
+        //localStorage.setItem('uName',this.props.name)
         
         const { name } = this.props
-        var welcome = `Welcome, {name.firstname}`
+        // var welcome = `Welcome, {name.firstname}`
 
         if (!currentUser) {
             return (
@@ -60,7 +60,7 @@ class Navigation extends Component {
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
                     <NavLink className="navbar-brand" to="/">
-                        The inlämningsuppgift page {welcome}
+                    {name ? name : currentUser.firstname + ' ' + currentUser.lastname}
                 </NavLink>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>

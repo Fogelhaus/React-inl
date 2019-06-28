@@ -99,7 +99,9 @@ exports.login = function(req, res) {
                             success: true,
                             token: token,
                             id: user[0]._id,
-                            email: user[0].email
+                            email: user[0].email,
+                            firstname: user[0].firstname,
+                            lastname: user[0].lastname
                         })
                     }
 

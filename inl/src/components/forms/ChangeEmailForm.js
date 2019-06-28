@@ -35,10 +35,10 @@ class ChangeEmailForm extends Component {
         const { email, submitted } = this.state
 
         return (
-            <div className="col">
+            <div className="col offset-1">
                                     <form noValidate onSubmit={this.handleSubmit}>
-                    <div className="form-row">
-                            <div className={"form-group col-md-12" + (submitted && !email ? " has-error" : "")}>
+                    <div className="">
+                            <div className={"form-group " + (submitted && !email ? " has-error" : "")}>
                                 <label htmlFor="email">Email</label>
                                 <input type="email" className={"form-control" + (submitted && !email ? " is-invalid" : "")} id="email" placeholder="Email" value={email} onChange={this.handleChange} />
                                 {submitted && !email &&
@@ -46,7 +46,7 @@ class ChangeEmailForm extends Component {
                                 }
                             </div>
                             </div>
-                        <button type="submit" className="btn btn-dark">Ändra din e-mail</button>
+                        <button type="submit" className="btn btn-dark">Ändra e-mail</button>
                     </form>
             </div>
 

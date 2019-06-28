@@ -66,7 +66,7 @@ render() {
         <div className="container">
         <div className="row justify-content-center">
             <div className="col-8">
-                <h2 className="font-weight-light text-center">Registrera ett kundärende.</h2>
+                <h2 className="font-weight-light text-center">Registrera ett kundärende</h2>
 
                 <form className="mt-4" onSubmit={this.onSubmit}>
                     <div className="form-row">

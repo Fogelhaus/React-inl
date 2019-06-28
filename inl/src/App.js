@@ -22,9 +22,9 @@ class App extends React.Component {
     return (
       <div className="">
         <Header />
-        <div className="col-6">
+        <div className="">
           {alert.message &&
-            <div className={`alert ${alert.type}`}>{alert.message}</div>
+            <div className= {`text-center alert ${alert.type}`}>{alert.message}</div>
           }
         </div>
         <Main />

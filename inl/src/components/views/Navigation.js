@@ -71,7 +71,7 @@ class Navigation extends Component {
                             <li className="nav-item">
                                 <NavLink exact to="/" activeClassName="active" className="nav-link">Hem</NavLink>
                             </li>
-                            <li className="nav-item">
+                            <li id="navLogout"className="nav-item">
                                 <a onClick={() => this.userLogout()}  className="nav-link">Logga ut</a>
                             </li>
                             <li className="nav-item">

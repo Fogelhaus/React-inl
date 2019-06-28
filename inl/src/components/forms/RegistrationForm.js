@@ -96,7 +96,7 @@ class RegistrationForm extends Component {
 
                     <button type="submit" className="btn btn-primary" disabled={!this.validateForm()}>Registrera</button>
                 </form>
-                <div className="my-5"><strong>StatusMessage: </strong> {statusMessage}</div>
+                <div className="my-5"> {statusMessage}</div>
             </div>
         )
     }

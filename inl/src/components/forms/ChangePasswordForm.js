@@ -41,7 +41,7 @@ class ChangePasswordForm extends Component {
         const { password, submitted } = this.state
 
         return (
-            <div className="col-6">
+            <div className="col offset-1">
                                 <form noValidate onSubmit={this.handleSubmit}>
                     <div className="form-row">
                         <div className={"form-group col-md-12" + (submitted && !password ? " has-error" : "")}>

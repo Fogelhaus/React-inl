@@ -1,6 +1,7 @@
 import actions from './types'
 import authHeader from '../../components/helpers/authHeader'
 import { alertActions } from '../actions/alertActions'
+import {history} from '../../components/helpers/history'
 
 const __apiUrl = 'http://localhost:3001/api'
 
@@ -34,6 +35,7 @@ export const newCustomer = (customerData) => dispatch => {
             payload: res.data
         }))
         .then(() => dispatch(alertActions.success('Ärendet har registrerats')))
+        history.push('/')
         
 }
 

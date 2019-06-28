@@ -16,6 +16,6 @@ http
 
 // MONGO DB SERVER
 db
-.set("useCreateIndex", true)
-.connect(mongodb_address, { useNewUrlParser: true })
+.set("useCreateIndex", true, 'useFindAndModify', false)
+.connect(mongodb_address, { useNewUrlParser: true, useFindAndModify: false })
 .then(() => console.log("MONGODB SERVER: " + mongodb_address))

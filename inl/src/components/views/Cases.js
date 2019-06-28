@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import http from 'axios'
 import PropTypes from 'prop-types'
 import authHeader from '../helpers/authHeader'
@@ -34,8 +35,9 @@ getCustomer(id) {
 }
 render() {
     let currentUser = localStorage.getItem('currentUser')
+    if (!currentUser) return <Redirect to='/' />
     const { user } = this.state
-    // Rendera lista enbart om currentUser är true. Annars tom <div> för att undvika krash.
+    
     if (currentUser) {
         const customerList = this.props.customers.map(customer => (
             <tr key={customer._id}>
@@ -91,7 +93,7 @@ return (
 
 
         <div className="mt-5">
-            <h3 className="font-weight-light text-center">Registrerade kunder</h3>
+            <h3 className="font-weight-light text-center">Registrerade kundärenden</h3>
             <h5 className="font-weight-light mt-5">Klicka på ett kundnummer för att visa detaljerad information</h5>
             <table className="table table-responsive-sm table-hover">
                 <thead>
